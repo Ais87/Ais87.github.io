@@ -234,13 +234,14 @@ function validateForm() {
 // $('#gform').prepend('Your submission has been processed...');
 // });
 </script>
-
+<script type="text/javascript">
 $('form#gform').submit(function(e){
     $(this).children('input[type=submit]').attr('disabled', 'disabled');
     // this is just for demonstration
     e.preventDefault(); 
     return false;
 });
+</script>
 
 <script type="text/javascript">
 //auto expand textarea
