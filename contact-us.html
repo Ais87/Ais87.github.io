@@ -232,9 +232,8 @@ function validateForm() {
     return false;
   } else {
     var button = document.getElementById("SubmitButton");
-    button.addEventListener('click', function(event) {
-      button.disabled = True;
-    });
+    button.disabled='disabled';
+    button.value='Thank you for your submission.';
     alert("Thank you for your submission. We will respond in 1-2 business days. We look forward to working with you.");
     return true;
   }
