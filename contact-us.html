@@ -225,8 +225,8 @@ function validateForm() {
     alert("Please enter a Message.");
     return false;
   } else {
-    $('#gform *').fadeOut(100);
     alert("Thank you for your submission. We will reach out in 1-2 business days.");
+    document.getElementById("Button").disabled=true;
     return true;
   }
 }
