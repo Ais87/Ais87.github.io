@@ -185,7 +185,7 @@ SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
 
 <div class="form-style-6">
 <h1>Contact Us</h1>
-<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScz66OiWrHf4mzT2BhEjvgKC-T2DU70JOjdjgKe2Vihs0ilFQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScz66OiWrHf4mzT2BhEjvgKC-T2DU70JOjdjgKe2Vihs0ilFQ/formResponse?" target="hidden_iframe" onsubmit="return validateForm()">
 <input type="text" name="entry.1753461039" id="entry.1753461039" placeholder="Your Name" />
 <input type="email" name="entry.2063180450" id="entry.2063180450" placeholder="Email Address" />
 <textarea name="entry.869700962" id="entry.869700962" placeholder="Type your Message" onkeyup="adjust_textarea(this)"></textarea>
@@ -199,10 +199,19 @@ SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
 <script src="assets/js/jquery.min.js"></script>
 <script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(1);
-  $('#gform').prepend('Your submission has been processed...');
-  });
+function validateForm() {
+  var x = document.forms["gform"]["entry.1753461039"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  } else {
+    return true;
+  }
+}
+// $('#gform').on('submit', function(e) {
+// $('#gform *').fadeOut(1);
+// $('#gform').prepend('Your submission has been processed...');
+// });
 </script>
 <script type="text/javascript">
 //auto expand textarea
