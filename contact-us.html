@@ -231,8 +231,10 @@ function validateForm() {
     alert("Please enter a Message.");
     return false;
   } else {
-    var disableButton = document.forms["gform"]["SubmitButton"].;
-    disableButton.disabled = true;
+    var button = document.getElementById("SubmitButton");
+    button.addEventListener('click', function(event) {
+      button.disabled = True;
+    });
     alert("Thank you for your submission. We will respond in 1-2 business days. We look forward to working with you.");
     return true;
   }
