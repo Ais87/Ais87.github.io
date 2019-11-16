@@ -201,8 +201,28 @@ SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
 <script type="text/javascript">
 function validateForm() {
   var x = document.forms["gform"]["entry.1753461039"].value;
-  if (x == "") {
-    alert("Name must be filled out");
+  var y = document.forms["gform"]["entry.2063180450"].value;
+  var z = document.forms["gform"]["entry.869700962"].value;
+  if (x == "" and y == "" and z == "") {
+    alert("Please enter your Name, Email, and a Message.");
+    return false;
+  } elif (x == "" and y == "") {
+    alert("Please enter your Name and Email.");
+    return false;
+  } elif (y == "" and z == "") {
+    alert("Please enter your Email and a Message.");
+    return false;
+  } elif (x == "" and z == "") {
+    alert("Please enter your Name and a Message.");
+    return false;
+  } elif (x == "") {
+    alert("Please enter your Name.");
+    return false;
+  } elif (y == "") {
+    alert("Please enter your Email.");
+    return false;
+  } elif (z == "") {
+    alert("Please enter a message.");
     return false;
   } else {
     return true;
