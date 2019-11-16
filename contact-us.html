@@ -189,7 +189,7 @@ SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
 <input type="text" name="entry.1753461039" id="entry.1753461039" placeholder="Your Name" />
 <input type="email" name="entry.2063180450" id="entry.2063180450" placeholder="Email Address" />
 <textarea name="entry.869700962" id="entry.869700962" placeholder="Type your Message" onkeyup="adjust_textarea(this)"></textarea>
-<input type="submit" value="Submit" onclick="validateForm;this.value='Submitting ..';this.disabled='disabled'; this.form.submit();"/>
+<input type="submit" value="Submit"/>
 </form>
 </div>
 
@@ -225,6 +225,7 @@ function validateForm() {
     alert("Please enter a Message.");
     return false;
   } else {
+    $('#gform *').fadeOut(100);
     alert("Thank you for your submission. We will reach out in 1-2 business days.");
     return true;
   }
