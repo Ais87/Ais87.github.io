@@ -225,11 +225,16 @@ function validateForm() {
     alert("Please enter a Message.");
     return false;
   } else {
-    alert("Thank you for your submission. We will reach out in 1-2 business days.");
-    document.getElementById("Button").disabled=true;
+    alert("Thank you for your submission. We will respond in 1-2 business days. We look forward to working with you.");
     return true;
   }
 }
+$('form#gform').submit(function(e){
+    $(this).children('input[type=submit]').attr('disabled', 'disabled');
+    // this is just for demonstration
+    e.preventDefault(); 
+    return false;
+});
 // $('#gform').on('submit', function(e) {
 // $('#gform *').fadeOut(1);
 // $('#gform').prepend('Your submission has been processed...');
