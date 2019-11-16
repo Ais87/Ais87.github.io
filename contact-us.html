@@ -229,17 +229,19 @@ function validateForm() {
     return true;
   }
 }
+// $('#gform').on('submit', function(e) {
+// $('#gform *').fadeOut(1);
+// $('#gform').prepend('Your submission has been processed...');
+// });
+</script>
+
 $('form#gform').submit(function(e){
     $(this).children('input[type=submit]').attr('disabled', 'disabled');
     // this is just for demonstration
     e.preventDefault(); 
     return false;
 });
-// $('#gform').on('submit', function(e) {
-// $('#gform *').fadeOut(1);
-// $('#gform').prepend('Your submission has been processed...');
-// });
-</script>
+
 <script type="text/javascript">
 //auto expand textarea
 function adjust_textarea(h) {
