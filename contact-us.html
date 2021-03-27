@@ -13,6 +13,18 @@
 <meta name="twitter:image" content="http://img1.wsimg.com/isteam/stock/DxxgW5w">
 <meta name="twitter:image:alt" content="AI Solutions 87 LLC">
 <meta name="theme-color" content="#22272a">
+	
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<!--<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">-->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
 
 <script type="text/javascript">
   document.write=function() {};
@@ -191,12 +203,44 @@ SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
 
 <div class="form-style-6">
 <h1>Contact Us</h1>
-<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScz66OiWrHf4mzT2BhEjvgKC-T2DU70JOjdjgKe2Vihs0ilFQ/formResponse?" target="hidden_iframe" onsubmit="return validateForm()">
+
+
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+<input type=hidden name='captcha_settings' value='{"keyname":"ais87","fallback":"true","orgId":"00D2a0000004doh","ts":""}'>
+<input type=hidden name="oid" value="00D2a0000004doh">
+<input type=hidden name="retURL" value="http://ais87.com">
+
+<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+
+<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+
+<label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
+
+<label for="state">State/Province</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
+
+<div class="g-recaptcha" data-sitekey="6LeJepEaAAAAANfh68JNRbFwXhNYOECOWkCANywd"></div><br>
+<input type="submit" name="submit">
+
+</form>
+
+	
+	
+<!--<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScz66OiWrHf4mzT2BhEjvgKC-T2DU70JOjdjgKe2Vihs0ilFQ/formResponse?" target="hidden_iframe" onsubmit="return validateForm()">
 <input type="text" name="entry.1753461039" id="entry.1753461039" placeholder="Your Name" />
 <input type="email" name="entry.2063180450" id="entry.2063180450" placeholder="Email Address" />
 <textarea name="entry.869700962" id="entry.869700962" placeholder="Type your Message" onkeyup="adjust_textarea(this)"></textarea>
 <input id="SubmitButton" type="submit" value="Submit" style="font-size:125%;"/>
-</form>
+</form>-->
 </div>
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
